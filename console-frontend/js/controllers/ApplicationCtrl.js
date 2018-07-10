@@ -573,7 +573,7 @@ angular.module('appControllers').controller('ApplicationCtrl', ['$scope', '$filt
       });
 
       // if the element wasn't found, it's a new metric
-      if (found === undefined) {
+      if (found === undefined || found === [] || found === "") {
         found = {
           name: obj.metric,
           info: {
